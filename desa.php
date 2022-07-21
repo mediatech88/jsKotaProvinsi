@@ -12,3 +12,6 @@ foreach ($kecamatan as $kec) :
 
 <?php endforeach;
 ?>
+
+
+<h1>hello</h1>
