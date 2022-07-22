@@ -37,13 +37,14 @@ include 'function.php';
 
 <?php
 //SIMPAN DIBARIS PALING BAWAH UNTUK KONVERSI PDF
+ob_get_clean();
+$content = ob_get_contents();
 
-$content = ob_get_clean();
 require __DIR__ . '/vendor/autoload.php';
 
 use Spipu\Html2Pdf\Html2Pdf;
 
-$html2pdf = new Html2Pdf();
-$html2pdf->output();
+$html2pdf = new Html2Pdf('P', 'F4', 'fr', true, 'UTF-8', 0);
+$html2pdf->output('holla.pdf');
 
 ?>
